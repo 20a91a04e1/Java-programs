@@ -1,0 +1,21 @@
+# Java-programs
+package numbers;
+import java.util.*;
+public class con_num {
+     public static void main(String[] args) {
+	 Scanner obj = new Scanner(System.in);
+	 System.out.println("enter two numbers:");
+	 int a = obj.nextInt();
+	 int b = obj.nextInt(); 
+	 //convert int data into string data
+	 String s = Integer.toString(a);
+	 String s1 = Integer.toString(b);
+	 String s3 = s+s1;
+	 System.out.println(s3);
+	 int c = Integer.parseInt(s3);
+	 System.out.println(c);
+	 
+
+	}
+
+}
