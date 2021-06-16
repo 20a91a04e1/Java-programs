@@ -1,0 +1,32 @@
+# Java-programs
+package numbers;
+import java.util.*;
+public class armstrong {
+
+	public static void main(String[] args){
+		Scanner obj = new Scanner(System.in);
+		System.out.println("enter number :");
+		int n = obj.nextInt();
+		int t = n;
+		int d = 0;
+		int sum = 0;
+		while(n>0)
+		{
+			int rem = n%10;
+			d++;
+			n = n/10;
+		}
+		n = t;
+		while(n>0)
+		{
+			int rem = n%10;
+			sum = sum+(int)Math.pow(rem,d);
+			n = n/10;
+			}
+		if(t == sum)
+			System.out.println("armstrong number");
+		else
+			System.out.println("not armstrong number");
+        }
+
+}
