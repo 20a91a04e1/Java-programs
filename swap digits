@@ -1,0 +1,19 @@
+# Java-programs
+package numbers;
+import java .util.*;
+public class swap_digit {
+    public static void main(String[] args) {
+	Scanner obj = new Scanner(System.in);
+	System.out.println("enter number :");
+	int n = obj.nextInt();
+	int ld = n%10;
+	int d = (int)Math.log10(n);
+	int fd = (int)(n/Math.pow(10, d));
+	int rev = ld;
+	rev = rev*(int)(Math.pow(10,d));
+	rev = rev+n%(int)(Math.pow(10, d));
+	rev = rev-ld;
+	rev = rev+fd;
+	System.out.println("swapped number = "+rev);
+	}
+}
