@@ -1,0 +1,22 @@
+# Java-programs
+package numbers;
+import java.util.*;
+public class palin_num {
+      public static void main(String[] args) {
+	  Scanner obj = new Scanner(System.in);
+	  System.out.println("enter numbers :");
+	  int num =  obj.nextInt();
+	  int rev = 0,rem;
+	  int x = num;
+	  while(num!=0)
+	  {
+		  rem = num%10;
+		  rev = rev * 10 + rem;
+		  num = num/10;
+       }
+	  if(x == rev)
+		  System.out.println(rev +" is palindrome");
+	  else
+		  System.out.println(rev +" is not a palindome");
+	}
+}
