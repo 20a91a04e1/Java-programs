@@ -1,0 +1,36 @@
+# Java-programs
+package numbers;
+import java.util.*;
+public class Disarium {
+	static int count(int n)
+	{
+		int rem = 0;
+		while(n!=0)
+		{
+			rem = rem+1;
+			n = n/10;
+		}
+		return rem;
+	}
+        public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter numbers :");
+		int num = sc.nextInt();
+		int len = count(num);
+		int n = num;
+		int sum = 0;
+		while(num>0)
+		{
+			int rem = num%10;
+			sum = sum+ (int)Math.pow(rem, len);
+			num = num/10;
+			len--;
+		}
+		if(sum == n)
+			System.out.println(n+" is disarium number");
+		else
+			System.out.println(n+" is not disarium number");
+
+	}
+
+}
