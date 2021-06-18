@@ -1,0 +1,35 @@
+# Java-programs
+package numbers;
+import java.util.*;
+public class prime_num2 {
+       public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		System.out.println("enter 2 numbers :");
+		int n1 = obj.nextInt();
+		int n2 = obj.nextInt();
+		for(int n = n1;n<=n2;n++)
+		{
+			if(n==0||n==1)
+				continue;
+			else 
+			{
+				int flag = 1;
+				for(int i = 2;i<=n/2;i++)
+				{
+					if(n%i==0)
+					{
+						flag = 0;
+						break;
+					}
+				}
+				if (flag == 1)
+					System.out.println(n+" ");
+				
+			}
+			
+		}
+		
+
+	}
+
+}
