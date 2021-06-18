@@ -1,0 +1,24 @@
+# Java-programs
+package numbers;
+import java.util.*;
+public class harshad {
+     public static void main(String[] args) {
+	 Scanner sc = new Scanner(System.in);
+	 System.out.println("enter number :");
+	 int n = sc.nextInt();
+	 int sum = 0;
+	 int temp = n;
+	 while(n>0)
+	 {
+		 int rem = n%10;
+		 sum = sum + rem;
+		 n = n/10;
+	 }
+	 if (temp%sum == 0)
+		 System.out.println("harshad number");
+	 else
+		 System.out.println("not harshad number");
+
+	}
+
+}
