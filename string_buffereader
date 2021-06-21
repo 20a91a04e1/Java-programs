@@ -1,0 +1,14 @@
+# Java-programs
+package numbers;
+import java.io.*;
+public class string_buffereader {
+     public static void main(String[] args)throws Exception {
+	 BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+	 System.out.println("enter String :");
+	 String name = obj.readLine();
+	 System.out.println("My name is  = "+name);
+	 
+
+	}
+
+}
