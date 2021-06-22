@@ -1,0 +1,16 @@
+# Java-programs
+package numbers;
+import java.io.*;
+public class sum_bufferedreader_float {
+      public static void main(String[] args) throws Exception {
+	  BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+	  System.out.println("enter 2 numbers:");
+	  float a = Float.parseFloat(obj.readLine());
+	  float b = Float.parseFloat(obj.readLine());
+	  int c = (int)(a+b);
+	  System.out.println("sum ="+c);
+
+	}
+
+}
+
