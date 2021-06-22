@@ -1,0 +1,14 @@
+# Java-programs
+package numbers;
+import java.io.*;
+public class sum_buffereader {
+     public static void main(String[] args) throws Exception {
+	 BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+	 System.out.println("enter 2 numbers :");
+	 int a = Integer.parseInt(obj.readLine());
+	 int b = Integer.parseInt(obj.readLine());
+	 int c = a+b;
+	 System.out.println("sum="+ c);
+	 }
+
+}
