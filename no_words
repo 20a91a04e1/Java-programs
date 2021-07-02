@@ -1,0 +1,12 @@
+# Java-programs
+package strings;
+import java.util.*;
+public class no_words {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Sentence:");
+		String str = sc.nextLine();
+		String words[] = str.split(" ");
+		System.out.println("No of words = "+ words.length);				
+	}
+}
