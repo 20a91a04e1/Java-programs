@@ -1,0 +1,68 @@
+# Java-programs
+package numbers;
+import java.util.*;
+public class nearest_fibo{
+
+	static boolean fibo(int n)
+	{
+		int t1 = 0, t2 = 1, sum =0;
+	while(sum < n) 
+		{
+			sum = t1+t2; 
+			t1 = t2;
+			t2=sum; 
+		}
+		if (sum == n)
+			return true; 
+		else
+			return false; 
+	}
+	
+	static int beforeFibo(int n) 
+	{
+		int c = 0;
+		while(true)
+		{
+			if(fibo(n))
+				return c;
+			else
+			{
+				n= n-1; 
+				c++; 
+			}				
+		}
+	}
+	
+	static int afterFibo(int n) 
+	{
+		int c = 0;
+		while(true)
+		{
+			if(fibo(n))
+				return c; 
+			else
+			{
+				n= n+1; 
+				c++; 
+			}				
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number:");
+		int n = sc.nextInt(); 
+		int m1 = beforeFibo(n);
+		int m2 = afterFibo(n);
+		if(m1 > m2)
+			System.out.println("Nearest Fibo="+(n+m2));
+		else if (m2 > m1)
+			System.out.println("Nearest Fibo="+(n-m1));
+		else if( (n-m1)==(n+m2) ) // 5==5
+			System.out.println("Nearest Fibo="+n);
+		else if(m1==m2) // n = 4
+			System.out.println("Nearest Fibo="+(n-m1)+" "+(n+m2));
+
+	}
+
+}
